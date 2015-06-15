@@ -26,13 +26,12 @@ THE SOFTWARE.
 
 RpcDigitalOut led1(LED1,"led1");
 
-
 EthernetInterface eth;  
 HTTPServer svr;
 
 int main() {
-  //Turn the LED off
-  led1.write(1)
+  //Turn the LEDs off
+  led1.write(1);
   
   RPC::add_rpc_class<RpcDigitalOut>();
 
