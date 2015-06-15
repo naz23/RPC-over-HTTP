@@ -24,19 +24,15 @@ THE SOFTWARE.
 #include "HTTPServer.h"
 #include "mbed_rpc.h"
 
-RpcDigitalOut led2(LED2,"led2");
-RpcDigitalOut led3(LED3,"led3");
-RpcDigitalOut led4(LED4, "led4");
+RpcDigitalOut led1(LED1,"led1");
 
 
 EthernetInterface eth;  
 HTTPServer svr;
 
 int main() {
-  //Turn the LEDs off
-  led2.write(1);
-  led3.write(1);
-  led4.write(1);
+  //Turn the LED off
+  led1.write(1)
   
   RPC::add_rpc_class<RpcDigitalOut>();
 
