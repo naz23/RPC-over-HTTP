@@ -24,7 +24,6 @@ THE SOFTWARE.
 #include "HTTPServer.h"
 #include "mbed_rpc.h"
 
-DigitalOut led1(LED1);
 RpcDigitalOut led2(LED2,"led2");
 RpcDigitalOut led3(LED3,"led3");
 RpcDigitalOut led4(LED4, "led4");
@@ -35,7 +34,6 @@ HTTPServer svr;
 
 int main() {
   //Turn the LEDs off
-  led1.write(1);
   led2.write(1);
   led3.write(1);
   led4.write(1);
@@ -66,7 +64,6 @@ int main() {
     svr.poll();
     if(tm.read()>.5)
     {
-      //led1=!led1; //Show that we are alive
       tm.start();
     }
   }
